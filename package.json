@@ -1,0 +1,27 @@
+{
+  "name": "mar25-t2w02-intro-to-node",
+  "version": "1.0.0",
+  "description": "bananas",
+  "homepage": "https://github.com/AlexStormwood/mar25-t2w02-intro-to-node#readme",
+  "bugs": {
+    "url": "https://github.com/AlexStormwood/mar25-t2w02-intro-to-node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexStormwood/mar25-t2w02-intro-to-node.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "bananas": "npm start",
+    "dev:bananas": "npm start",
+    "dev:watch":"nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
