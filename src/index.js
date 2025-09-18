@@ -1,41 +1,15 @@
-console.log("Hello, world!");
+// Index.js just runs the server for dev or production,
+// but NEVER for testing
 
-// Import the package
-const express = require('express');
-// Make an instance of an Express server
-const app = express();
+const {app} = require("./server.js");
+// const configuredServer = require("./server.js");
+// configuredServer.app.listen()
 
-// Enable processing of body content on incoming web requests
-// JSON is raw body JSON content
-app.use(express.json());
-// URL Encoded is typically from a form, like a <form></form>
-app.use(express.urlencoded({extended: true}));
+require("dotenv").config();
 
 // Grab the port number from environment variables or use a hardcoded fallback value
-const port = 3000;
-
-// Configure the server to respond to GET "/" endpoint requests
-app.get('/', (req, res) => {
-	// Send back some HTML content
-	// res.send('<h1>Hello World!</h1>');
-	res.json({
-		message:"Hello, world!"
-	});
-});
-
-app.post("/", (request, response) => {
-	console.log(request.body);
-	if (!request.body || request.body.message == undefined){
-		return response.status(401).json({error:"Invalid request"})
-	}
-
-
-	let repeatedWord = request.body.message;
-
-	response.json({
-		message: repeatedWord + repeatedWord + repeatedWord
-	});
-});
+const port = process.env.PORT || 3000;
+console.log("Environment variable for PORT is: " + process.env.PORT);
 
 // Start the server, allow it to listen to web traffic on the specified port 
 app.listen(port, () => {
