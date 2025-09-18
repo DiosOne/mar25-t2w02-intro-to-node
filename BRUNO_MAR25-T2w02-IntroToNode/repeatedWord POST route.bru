@@ -1,0 +1,21 @@
+meta {
+  name: repeatedWord POST route
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "message":"hello, world"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

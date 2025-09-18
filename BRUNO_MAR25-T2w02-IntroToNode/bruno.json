@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "BRUNO_MAR25-T2w02-IntroToNode",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
