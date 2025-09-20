@@ -13,6 +13,7 @@ async function seed(){
 			author: [
 				"Douglas Adams"
 			],
+			isbn: ["bananas", "bananas2"],
 			series: "Hitchhiker's Guide to the Galaxy"
 		},
 		{
@@ -20,6 +21,7 @@ async function seed(){
 			author: [
 				"Some Punny Guy"
 			],
+			isbn: ["mango"],
 			series: "Very Serious Collection of Very Funny Jokes"
 		},
 	];
