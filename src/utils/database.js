@@ -37,6 +37,10 @@ async function dbSandbox(){
 	await dbClose();
 }
 
-dbSandbox();
+module.exports = {
+	dbConnect, dbClose
+}
+
+// dbSandbox();
 
 // console.log("file will end after this log");
